@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog> 
+@{
+    ViewData["Title"] = "BlogListWriter";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Yazarın Blogları</h1>
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <a href="/Blog/Add" class="btn btn-primary">Yeni Blog Ekle</a>
+    <table class="table table-bordered" style="margin-top:10px">
+        <tr>
+            <th>#</th>
+            <th>Blog Başlık</th>
+            <th>Oluşturma Tarihi</th>
+            <th>Kategori</th>
+            <th>Durum</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.BlogId</td>
+                <td>@x.BlogTitle</td>
+                <td>@x.BlogCreateDate</td>
+                <td>@x.Category.CategoryName</td>
+                <td>@x.BlogStatus</td>
+                <td><a href="/Blog/Delete/@x.BlogId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Blog/Update/@x.BlogId" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+
+        }
+    </table>
+</div>

@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<div class="container">
+    <h3>Yazar Yeni Blog Ekleme Sayfası</h3>
+
+    <form class="form-group" method="post">
+
+        <label><b>Blog Başlık</b></label>
+        @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+        <br />
+        <label><b>Blog İçerik</b></label>
+        @Html.TextAreaFor(x => x.BlogContent, new { @class = "form-control" })
+        <br />
+        <label><b>Blog Resim1</b></label>
+        @Html.TextBoxFor(x => x.BlogSmallImage, new { @class = "form-control" })
+        <br />
+        <label><b>Blog Resim2</b></label>
+        @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+        <br />
+        <label><b>Blog Durum</b></label>
+        @Html.TextBoxFor(x => x.BlogStatus, new { @class = "form-control" })
+        <br />
+        <label><b>Blog Category</b></label>
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.cate, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Yeni Blog Ekle</button>
+
+    </form>
+</div>

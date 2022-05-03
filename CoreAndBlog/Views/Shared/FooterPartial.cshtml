@@ -1,0 +1,88 @@
+﻿<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+                <h3>Misyonumuz</h3>
+              
+                <p>
+                    Blog (Türkçe: ağ günlüğü, günce) veya Weblog (Türkçe: Ağ kütüğü) teknik bilgi gerektirmeden, kendi istedikleri şeyleri, kendi istedikleri şekilde yazan insanların oluşturabildikleri...
+
+
+                </p>
+                <div class="read">
+                    <a href="/About/Index" class="btn btn-primary read-m">Daha Fazla Oku</a>
+                </div>
+            </div>
+            <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+
+                <div class="tech-btm">
+                    <h3>Son Gönderiler</h3>
+                    @await Component.InvokeAsync("BlogLast3Post")
+                    
+                    
+                </div>
+            </div>
+            <!-- subscribe -->
+            <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
+                <h2>Yeni Haberler</h2>
+                <div class="subscribe-main text-left">
+                    <div class="subscribe-form">
+                        <form action="#" method="post" class="subscribe_form">
+                            <input class="form-control" type="email" placeholder="Enter your email..." required="">
+                            <button type="submit" class="btn btn-primary submit">Buton</button>
+                        </form>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <p>Gizliliğinize saygı duyuyoruz. Asla spam yok!</p>
+                </div>
+                <!-- //subscribe -->
+            </div>
+        </div>
+        <!-- footer -->
+
+
+        <div class="footer-cpy text-center">
+            <div class="footer-social">
+                <div class="copyrighttop">
+                    <ul>
+                        <li class="mx-3">
+                            <a class="facebook" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="facebook" href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                                <span>Google+</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="fab fa-pinterest-p"></i>
+                                <span>Pinterest</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="w3layouts-agile-copyrightbottom">
+                <p>
+                    © 2021 CoreAndBlog. Tüm Hakları Saklıdır.
+                    <a href="http://w3layouts.com/">Erkan Çalışkan</a>
+                </p>
+
+            </div>
+        </div>
+        <!-- //footer -->
+
+
+    </div>
+</footer>
